@@ -29,19 +29,19 @@
             }
         })
 
-        let key = document.getElementById("key")
+        const key = document.getElementById("key")
         function changeColor(color) {
             key.style.backgroundColor = color
         }
 
 
         function createDiv(color) {
-            let div = document.createElement('div')
+            const div = document.createElement('div')
             div.style.width = '200px'
             div.style.height = '200px'
             div.style.border = 'solid 2px black'
             div.style.backgroundColor = color
-            let body = document.body
+            const body = document.body
             body.appendChild(div)
         }
 
