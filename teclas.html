@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teclas</title>
+</head>
+
+<body>
+
+    <div id="key" style="border: solid 2px black; background-color: white; width: 200px; height: 200px;"></div>
+
+    <script>
+
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'a') {
+                changeColor('pink')
+            } else if (event.key === 's') {
+                changeColor('orange')
+            } else if (event.key === 'd') {
+                changeColor('skyblue')
+            } else if (event.key === 'q') {
+                createDiv('purple')
+            } else if (event.key === 'w') {
+                createDiv('grey')
+            } else if (event.key === 'e') {
+                createDiv('brown')
+            }
+        })
+
+        let key = document.getElementById("key")
+        function changeColor(color) {
+            key.style.backgroundColor = color
+        }
+
+
+        function createDiv(color) {
+            let div = document.createElement('div')
+            div.style.width = '200px'
+            div.style.height = '200px'
+            div.style.border = 'solid 2px black'
+            div.style.backgroundColor = color
+            let body = document.body
+            body.appendChild(div)
+        }
+
+    </script>
+
+</body>
+
+</html>
